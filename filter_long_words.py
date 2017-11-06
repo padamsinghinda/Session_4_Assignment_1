@@ -4,6 +4,7 @@ Created on Sun Oct 31 01:19:14 2017
 
 @author: Inda
 """
+import re
 
 def filter_long_words(list_of_words, n):
     """ 
@@ -17,12 +18,15 @@ def filter_long_words(list_of_words, n):
     return result
 
 def main():
-    words = input("Please enter list of words (use comma separater between two words) : ").split(',')
+    words = input("Please enter list of words : ")
+    patterns = r"[,\[ \] \']"
+    pattern = re.compile(patterns)
+    words = re.split(pattern,words)
     n = int(input("Please enter an integer : "))
     
     output = filter_long_words(words, n)
     
-    print("\nList of words which are longer than integer {} are : {}".format(n, ', '.join(output)))
+    print("\nList of words which are longer than integer {} are : [{}]".format(n,','.join(output)))
  
 if __name__ == '__main__':
     main()
