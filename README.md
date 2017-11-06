@@ -1,7 +1,7 @@
 # Session_4_Assignment_1
 Writing methods and functions
 
-Program-1 (filter_long_words.py) :
+Program-1 (triangle_area.py) :
 ----------------------------------
 Python Program(with class concepts) to find the area of the triangle using the below 
 formula.  
