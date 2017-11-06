@@ -19,7 +19,7 @@ def filter_long_words(list_of_words, n):
 
 def main():
     words = input("Please enter list of words : ")
-    patterns = r"[,\[ \] \']"
+    patterns = r"[,\[ \] \'\"]"
     pattern = re.compile(patterns)
     words = re.split(pattern,words)
     n = int(input("Please enter an integer : "))
